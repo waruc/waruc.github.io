@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+div {
+  margin: 5vh 20vw
+}
+
+h1 {
+  font: 48px #333333;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font: 36px #333333;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font: 16px #333333;
+  font-family: 'Arial', sans-serif;
+}
