@@ -1,12 +1,165 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>WARUC</title>
-    <script type="text/javascript">
-      window.location="https://waroadusagecharge.org";
-    </script>
+    <link rel="icon" href="resources/icon.png">
+    <link href="style/main.css" type="text/css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/scroller.js" charset="utf-8"></script>
+    <script src="js/scroll-to.js" charset="utf-8"></script>
   </head>
   <body>
+    <div id=fullpage>
+      <div id="header-wrapper">
+        <div id="header-actual">
+          <h1 id="site-title">WARUC</h1>
+          <nav id="section-nav">
+            <ul id="section-ul" class="flex-ul">
+              <li class="flex-item"><a href="#about" class="section-link transition-all-150">About</a></li>
+              <li class="flex-item"><a href="#tech" class="section-link transition-all-150">Tech</a></li>
+              <li class="flex-item"><a href="#future" class="section-link transition-all-150">Future</a></li>
+            </ul>
+          </nav>
+          <div id="mobile-nav-button">
+            <span id="button-span"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="seattle-i5">
+        <div id="landing" class="header section">
+          <div class="flexbox">
+            <div class="flex-left">
+              <img id="app-icon" src="/resources/icon.png" alt="waruc icon">
+              <h1>Washington Road Usage Charge Pilot</h1>
+              <p class="sub-label">UW Information School Capstone 2017</p>
+            </div>
+            <div class="flex-right">
+              <ul class="team-list">
+                <li class="team-member"><a class="transition-all-150" href="https://www.linkedin.com/in/babbsdj/">Dylan&nbsp;Babbs</a></li>
+                <li class="member-info">Informatics&nbsp;'17</li>
+                <li class="member-info">Product&nbsp;Manager</li>
+                <br>
+                <li class="team-member"><a class="transition-all-150" href="https://www.linkedin.com/in/jacksonmaxfield/">Jackson&nbsp;Brown</a></li>
+                <li class="member-info">Informatics&nbsp;'17</li>
+                <li class="member-info">Software&nbsp;Engineer</li>
+                <br>
+                <li class="team-member"><a class="transition-all-150" href="https://github.com/JockFax32">Jack&nbsp;Fox</a></li>
+                <li class="member-info">Informatics&nbsp;'17</li>
+                <li class="member-info">Software&nbsp;Engineer</li>
+                <br>
+                <li class="team-member"><a class="transition-all-150" href="https://www.linkedin.com/in/nicknordale/">Nick&nbsp;Nordale</a></li>
+                <li class="member-info">Informatics&nbsp;'17</li>
+                <li class="member-info">Software&nbsp;Engineer</li>
+                <br>
+                <li class="team-member"><a class="transition-all-150" href="https://www.linkedin.com/in/ishan-saksena-428269107/">Ishan&nbsp;Saksena</a></li>
+                <li class="member-info">Informatics&nbsp;'18</li>
+                <li class="member-info">Software&nbsp;Engineer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="section">
+        <div class="flexbox">
+          <div class="flex-left">
+            <h2>Introducing WARUC iOS</h2>
+            <ul>
+              <li>Automatic vehicle recognition, pairing, and mileage recording</li>
+              <li>Bluetooth LE connection to minimize battery consumption</li>
+              <li>Trip history view to provide driving validation and analytics to user</li>
+              <li>Location tracking available to those without OBD-II hardware</li>
+            </ul>
+            <p><a class="transition-all-150" href="https://waroadusagecharge.org/">Washington Road Usage Charge Pilot Project</a> asked for potential solutions to help solve the state transporation infrastructure budget. Our solution is an iOS application that utilizies modern Bluetooth Low Energy technology, our open source OBD-II Bluetooth connection framework, location services, and more to easily connect and record mileage of a vehicle.</p>
+            <p><a class="transition-all-150" href="https://itunes.apple.com/us/app/waruc-washington-road-usage-charge-pilot/id1240657572?ls=1&mt=8">Available now in the App Store</a></p>
+          </div>
+          <div class="flex-right">
+            <img src="/resources/design-stack.png" alt="ios design stack">
+          </div>
+        </div>
+      </div>
+      <div id="spec" class="section">
+        <div class="flexbox">
+          <div class="image-w-label">
+            <h2>Vehicle Onboarding</h2>
+            <img src="/resources/onboarding.gif" alt="vehicle onboarding gif">
+          </div>
+          <div class="image-w-label">
+            <h2>Recording Mileage</h2>
+            <img src="/resources/drive.gif" alt="driving gif">
+          </div>
+          <div class="image-w-label">
+            <h2>Vehicle Detection</h2>
+            <img src="/resources/add-vehicle.gif" alt="vehicle detection gif">
+          </div>
+        </div>
+      </div>
+      <div id="tech" class="section">
+          <div>
+            <h2>Application and Tech</h2>
+          </div>
+          <div class="flexbox">
+            <div class="flex-tri-left">
+              <h3>OBD-II to iOS Connection</h3>
+              <ul>
+                <li>Bluetooth Low Energy connection means low battery consumption and quick pairing of devices</li>
+                <li>Mobile device connects automatically when OBD-II presence is detected</li>
+                <li>All iOS devices iPhone 4+ equipped with Bluetooth LE</li>
+                <li>Built first open source framework to establish and maintain connection between OBD-II and iOS devices</li>
+              </ul>
+            </div>
+            <div class="flex-tri-middle">
+              <h3>Database Connection</h3>
+              <ul>
+                <li>Built with Firebase (A Google Service);<br>Quick, secure, and easy to manage</li>
+                <li>Easy to update ERD and subsequent database</li>
+                <li>Our database was created with scalability and adaptability in mind, allowing for growth and use long after the pilot project</li>
+              </ul>
+            </div>
+            <div class="flex-tri-right">
+              <h3>Design Choices</h3>
+              <ul>
+                <li>Intuitive interface for users to understand the current state of the application</li>
+                <li>With OBD-II there is minimal impact to the users driving experience</li>
+                <li>Extensive help during onboarding process if the user would like assistance allows all users to understand setup</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="future" class="section">
+        <div>
+          <h2>Future Work</h2>
+          <div class="center-ish">
+            <p>While our application meets all of the requirements given to us by our sponsor, we would like to take a moment to address future work that could improve our application:</p>
+            <ul>
+              <li>Build a prediciton algorithm to determine the likelihood of an individual missing a trip. From previous trips traveled, it was likely the user would have traveled again today but didn't, in which case, send a notification asking them to turn on their Bluetooth next time they enter their vehicle.</li>
+              <li>Add public and private road classification and detection. This would make the location services option much more valuable than the OBD-II option for many drivers as this would allow them to reduce what they are charged based on where they drive.</li>
+              <li>Build odometer computer vision update, this would be a fail-safe mechanism that would happen or be prompted if the user hasn't recorded any miles traveled in a given time period. In which case, the mileage difference from the first check to the mileage on the odometer would be fully charged.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer class="fat-footer section">
+        <div class="flexbox">
+          <div class="flex-left">
+            <ul>
+              <li><a class="transition-all-150" href="https://waroadusagecharge.org/">Sponsor</a></li>
+              <li><a class="transition-all-150" href="https://github.com/waruc">Documentation</a></li>
+              <li><a class="transition-all-150" href="support.html">Support</a></li>
+              <li><a class="transition-all-150" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="transition-all-150" href="terms-of-service.html">Terms of Services</a></li>
+            </ul>
+          </div>
+          <div class="flex-right">
+            <p>Contact <i>capstone.waruc@gmail.com</i> for all other information or inquiry.</p>
+            <p>Thank you to the Washington Road Usage Charge Pilot Program and to the Informatics Capstone Lecturers and Advisors for all of the help and guidance throughout 2017.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

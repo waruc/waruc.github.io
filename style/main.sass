@@ -1,0 +1,433 @@
+@import 'fontface'
+@include fontFace('Circular-Med', '../fonts/circular-medium')
+@include fontFace('Circular-Med-Italic', '../fonts/circular-medium-italic')
+@include fontFace('Circular-Book', '../fonts/circular-book')
+@include fontFace('Circular-Book-Italic', '../fonts/circular-book-italic')
+@include fontFace('Circular-Bold', '../fonts/circular-bold')
+@include fontFace('Circular-Bold-Italic', '../fonts/circular-bold-italic')
+
+$font-main: 'Circular-Med'
+$font-main-italic: 'Circular-Med'
+$font-light: 'Circular-Book'
+$font-light-italic: 'Circular-Book-Italic'
+$font-heavy: 'Circular-Bold'
+$font-heavy-Italic: 'Circular-Bold-Italic'
+
+$white: #F6F9FC
+$purple: #6525D2
+$mint: #24B47E
+$mint-dark: darken($mint, 20%)
+$sky: #6772E5
+$candy: #B866C6
+$night: #1C1943
+
+$media-break: 800px
+
+body
+  margin: 0px
+  overflow-x: hidden
+
+// HEADER
+#header-actual
+  background-color: $white
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -moz-flex
+  display: -webkit-flex
+  display: flex
+  height: 70px
+  justify-content: space-between
+  left: 0px
+  margin: 0px 0px 0px 0px
+  padding: 0px 0px 0px 0px
+  position: fixed
+  top: 0px
+  width: 100%
+  z-index: 1000
+  -ms-box-orient: horizontal
+
+#site-title
+  display: inline-block
+  font-family: $font-heavy
+  margin: auto auto auto 5%
+
+#site-link
+  border-bottom: 2px solid transparent
+  color: $night
+  text-decoration: none
+
+  &:visited
+    color: $night
+
+  &:hover
+    border-bottom: 2px solid $night
+    color: $night
+
+#site-nav-container
+  display: inline-block
+  margin: 0px 2px 0px 0px
+
+#section-nav
+  margin: 0px 5% 0px 0px
+
+.flex-ul
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -moz-flex
+  display: -webkit-flex
+  display: flex
+  list-style: none
+  margin: 0px 0px 0px 0px
+  padding: 0px
+  -ms-box-orient: horizontal
+
+.flex-item
+  font-family: $font-light
+  line-height: 70px
+  padding: 0px 0px 0px 30px
+  text-align: center
+
+.section-link
+  border-bottom: 1px solid transparent
+  color: $mint
+  font-size: 24px
+  text-decoration: none
+
+  &:visited
+    color: $mint
+
+  &:hover
+    border-bottom: 1px solid $mint-dark
+    color: $mint-dark
+
+@media (max-width: $media-break)
+  #header-actual
+    #section-nav
+      background-color: $white
+      display: none
+      margin-top: 72px
+      opacity: 0.95
+      padding-top: 0px
+      position: absolute
+      right: 0px
+      text-align: center
+      width: 100%
+
+      .flex-ul
+        display: block
+
+        .flex-item
+          padding: 0px
+          line-height: 40px
+
+    #mobile-nav-button
+      align-items: center
+      display: -webkit-box
+      display: -moz-box
+      display: -ms-flexbox
+      display: -webkit-flex
+      display: flex
+      height: 20px
+      margin-top: 30px
+      margin-right: 10px
+      width: 20px
+
+      #button-span, #button-span:before, #button-span:after
+        background-color: $mint
+        content: ""
+        display: block
+        height: 2px
+        width: 20px
+        position: relative
+        -o-transition: all 500ms ease-in-out
+        -webkit-transition: all 500ms ease-in-out
+        -moz-transition: all 500ms ease-in-out
+        -ms-transition: all 500ms ease-in-out
+        transition: all 500ms ease-in-out
+
+      #button-span:before
+        top: 6px
+
+      #button-span:after
+        top: -8px
+
+    .toggled
+      #button-span
+        transform: rotate(90deg)
+        transform-origin: center
+
+
+      #button-span:after
+        left: 2px
+        transform: rotate(40deg)
+        transform-origin: left
+
+      #button-span:before
+        left: 2px
+        transform: rotate(-40deg)
+        transform-origin: left
+
+// CLASSES
+.transition-all-150
+  -webkit-transition: all 150ms ease-in-out
+  -moz-transition: all 150ms ease-in-out
+  -o-transition: all 150ms ease-in-out
+  transition: all 150ms ease-in-out
+
+.section
+  font-family: $font-heavy
+  text-align: left
+  width: 100vw
+
+  h1
+    font-size: 72px
+    margin: 0px 0px 0px 0px
+    padding: 0px 0px 0px 5%
+
+  h2
+    font-size: 54px
+    color: $purple
+
+  p
+    font-family: $font-main
+    margin: 0px 0px 0px 0px
+    padding: 40px 0px 0px 5%
+
+.fat-footer
+  background-color: $night
+  color: $white
+  width: 100vw
+
+  ul
+    margin: 0px 0px 0px 0px
+    padding: 20px 0px 20px 10%
+    list-style-type: none
+
+    li
+      padding: 10px 0px 10px 0px
+
+  a
+    color: $white
+    border-bottom: 1px solid transparent
+    text-decoration: none
+    padding: 0px 0px 0px 0px
+
+    &:visited
+      color: $white
+
+    &:hover
+      color: $mint
+      border-bottom: 1px solid $mint
+
+#seattle-i5
+  background: url('../resources/seattle-i5.jpg')
+  background-size: cover
+  min-height: 100vh
+  position: relative
+
+#app-icon
+  height: auto
+  max-width: 50%
+
+#landing
+  background-color: transparentize($purple, 0.6)
+  color: $white
+  min-height: 100vh
+
+#about
+  background-color: white
+  color: $night
+
+  .flex-left
+    padding-top: 0px
+
+  p
+    color: $night
+    padding: 40px 0px 0px 0px
+
+    a
+      color: $mint
+      text-decoration: none
+      border-bottom: 1px solid transparent
+
+      &:visited
+        color: $mint
+
+      &:hover
+        color: $mint-dark
+        border-bottom: 1px solid $mint-dark
+
+  ul
+    list-style-type: none
+    padding-left: 0px
+
+    li
+      color: $night
+      width: 80%
+      padding: 10px 0px 10px 0px
+      border-bottom: 1px solid $mint
+
+  img
+    width: 90%
+    min-width: 300px
+
+#spec
+  background-color: $night
+  color: $white
+
+  .flexbox
+    padding-bottom: 2%
+
+  .image-w-label
+    padding: 2% 5% 2% 5%
+    text-align: center
+
+    h2
+      font-size: 36px
+      color: $mint
+
+    img
+      height: 100%
+
+#tech
+  background-color: $mint
+  color: $white
+  height: auto
+
+  .flexbox
+    vertical-align: top
+    padding-bottom: 40px
+
+  .flex-tri-left
+    padding-top: 0px
+    margin: 0px 3% 0px 0%
+    width: 25%
+    min-width: 300px
+    height: 450px
+
+  .flex-tri-middle
+    padding: 0px 0px 0px 0px
+    margin: 0px 3% 0px 3%
+    width: 25%
+    min-width: 300px
+    height: 450px
+
+  .flex-tri-right
+    padding-top: 0px
+    margin: 0px 0% 0px 3%
+    width: 25%
+    min-width: 300px
+    height: 450px
+
+  h2
+    color: $night
+    margin: 0px 0px 0px 0px
+    padding: 5% 0px 2% 10%
+
+  h3
+    font-size: 36px
+
+  p
+    color: $night
+    padding: 40px 0px 0px 0px
+
+    a
+      color: $mint
+      text-decoration: none
+      border-bottom: 1px solid transparent
+
+      &:visited
+        color: $mint
+
+      &:hover
+        color: $mint-dark
+        border-bottom: 1px solid $mint-dark
+
+  ul
+    list-style-type: none
+    padding-left: 0px
+
+    li
+      color: $night
+      width: 80%
+      padding: 10px 0px 10px 0px
+      border-bottom: 1px solid $mint
+
+#future
+  background-color: $sky
+  color: $white
+
+  h2
+    color: $white
+    margin: 0px 0px 0px 0px
+    padding: 5% 0px 2% 10%
+
+  p
+    padding: 0px 0px 0px 0px
+    font-size: 24px
+    color: $night
+    border-bottom: 2px solid $night
+    margin-bottom: 40px
+
+  ul
+    list-style-type: none
+    padding: 0px 0px 60px 0px
+    margin: 0px 0px 0px 0px
+
+    li
+      padding: 10px 0px 10px 0px
+
+  .center-ish
+    width: 60%
+    margin: 0px 20% 0px 20%
+
+.team-list
+  padding: 30% 0px 0px 30%
+  list-style-type: none
+
+.team-member
+  a
+    border-bottom: none
+    color: $mint
+    font-size: 22px
+    text-decoration: none
+
+    &:visited
+      color: $mint
+
+    &:hover
+      color: $white
+
+.member-info
+  margin: 0px 0px 0px 40px
+
+.sub-label
+  color: $mint
+  font-size: 36px
+
+.flexbox
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  justify-content: center
+  -webkit-flex-flow: row wrap
+  flex-wrap: wrap
+  flex-direction: row
+  align-items: center
+  margin: 0px auto 0px auto
+  padding: 0px 0px 100px 0px
+  width: 90%
+
+.flex-left
+  width: 40%
+  margin: auto 5% auto 5%
+  padding: 170px 0px 0px 0px
+
+.flex-right
+  width: 40%
+  margin: auto 5% auto 5%
+  padding: 170px 0px 0px 0px
