@@ -6,6 +6,8 @@
 @include fontFace('Circular-Bold', '../fonts/circular-bold')
 @include fontFace('Circular-Bold-Italic', '../fonts/circular-bold-italic')
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto')
+
 $font-main: 'Circular-Med'
 $font-main-italic: 'Circular-Med'
 $font-light: 'Circular-Book'
@@ -49,7 +51,7 @@ body
 
 #site-title
   display: inline-block
-  font-family: $font-heavy
+  font-family: $font-heavy, 'Open Sans', 'Roboto', Helvetica, sans-serif
   margin: auto auto auto 5%
 
 #site-link
@@ -84,7 +86,7 @@ body
   -ms-box-orient: horizontal
 
 .flex-item
-  font-family: $font-light
+  font-family: $font-light, 'Open Sans', 'Roboto', Helvetica, sans-serif
   line-height: 70px
   padding: 0px 0px 0px 30px
   text-align: center
@@ -177,7 +179,7 @@ body
   transition: all 150ms ease-in-out
 
 .section
-  font-family: $font-heavy
+  font-family: $font-heavy, 'Open Sans', 'Roboto', Helvetica, sans-serif
   text-align: left
   width: 100vw
 
@@ -191,7 +193,7 @@ body
     color: $purple
 
   p
-    font-family: $font-main
+    font-family: $font-main, 'Open Sans', 'Roboto', Helvetica, sans-serif
     margin: 0px 0px 0px 0px
     padding: 40px 0px 0px 5%
 

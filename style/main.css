@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
 @font-face {
   font-family: "Circular-Med";
   src: url("../fonts/circular-medium.eot");
@@ -59,7 +60,7 @@ body {
 
 #site-title {
   display: inline-block;
-  font-family: "Circular-Bold";
+  font-family: "Circular-Bold", "Open Sans", "Roboto", Helvetica, sans-serif;
   margin: auto auto auto 5%; }
 
 #site-link {
@@ -92,7 +93,7 @@ body {
   -ms-box-orient: horizontal; }
 
 .flex-item {
-  font-family: "Circular-Book";
+  font-family: "Circular-Book", "Open Sans", "Roboto", Helvetica, sans-serif;
   line-height: 70px;
   padding: 0px 0px 0px 30px;
   text-align: center; }
@@ -169,7 +170,7 @@ body {
   transition: all 150ms ease-in-out; }
 
 .section {
-  font-family: "Circular-Bold";
+  font-family: "Circular-Bold", "Open Sans", "Roboto", Helvetica, sans-serif;
   text-align: left;
   width: 100vw; }
   .section h1 {
@@ -180,7 +181,7 @@ body {
     font-size: 54px;
     color: #6525D2; }
   .section p {
-    font-family: "Circular-Med";
+    font-family: "Circular-Med", "Open Sans", "Roboto", Helvetica, sans-serif;
     margin: 0px 0px 0px 0px;
     padding: 40px 0px 0px 5%; }
 

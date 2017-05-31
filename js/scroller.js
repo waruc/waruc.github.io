@@ -4,7 +4,7 @@ var elements = [];
 
 $(document).ready(function() {
   elements = [$('#landing'), $('#about'), $('#spec'), $('#tech'), $('#future')];
-  setInterval(runScroller, 1500);
+  setInterval(runScroller, 20000);
 });
 
 function runScroller() {
